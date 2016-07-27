@@ -1,0 +1,6 @@
+/Users/rohit/Projects/Marketo/Marketo/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/rohit/Projects/Marketo/Marketo/obj/Debug/Marketo.gradient-slice.png
+/Users/rohit/Projects/Marketo/Marketo/bin/Debug/Marketo.dll.mdb
+/Users/rohit/Projects/Marketo/Marketo/bin/Debug/Marketo.dll
+/Users/rohit/Projects/Marketo/Marketo/obj/Debug/Marketo.dll
+/Users/rohit/Projects/Marketo/Marketo/obj/Debug/Marketo.dll.mdb

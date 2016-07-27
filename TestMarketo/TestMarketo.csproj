@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{CCEC9914-C7E9-49DF-BA6B-AD9FC58577ED}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestMarketo</RootNamespace>
+    <AssemblyName>TestMarketo</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Mono.Data.Sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\MKTResources.bundle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="InfColorPickerView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Marketo\Marketo.csproj">
+      <Project>{5B64F9BA-C805-43E6-9FD5-224CE528D19E}</Project>
+      <Name>Marketo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MKTResources.bundle\gradient-slice.png" />
+    <BundleResource Include="Resources\MKTResources.bundle\Info.plist" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\2bL-KO-YST-view-a8U-xE-E7G~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\2bL-KO-YST-view-a8U-xE-E7G~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\2bL-KO-YST-view-a8U-xE-E7G~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\2bL-KO-YST-view-a8U-xE-E7G~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\2bL-KO-YST-view-a8U-xE-E7G~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\2bL-KO-YST-view-a8U-xE-E7G~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\49h-a3-A41-view-fvT-Ft-zfF~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\49h-a3-A41-view-fvT-Ft-zfF~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\49h-a3-A41-view-fvT-Ft-zfF~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\49h-a3-A41-view-fvT-Ft-zfF~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\49h-a3-A41-view-fvT-Ft-zfF~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\49h-a3-A41-view-fvT-Ft-zfF~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\gec-So-ihj-view-VZ7-Pz-YT3~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\gec-So-ihj-view-VZ7-Pz-YT3~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\gec-So-ihj-view-VZ7-Pz-YT3~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\gec-So-ihj-view-VZ7-Pz-YT3~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\gec-So-ihj-view-VZ7-Pz-YT3~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\gec-So-ihj-view-VZ7-Pz-YT3~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\h9i-mR-gP3-view-lkT-LT-HVP~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\h9i-mR-gP3-view-lkT-LT-HVP~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\h9i-mR-gP3-view-lkT-LT-HVP~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\h9i-mR-gP3-view-lkT-LT-HVP~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\h9i-mR-gP3-view-lkT-LT-HVP~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\h9i-mR-gP3-view-lkT-LT-HVP~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IPz-a6-TKw-view-10q-5i-bJ8~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IPz-a6-TKw-view-10q-5i-bJ8~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IPz-a6-TKw-view-10q-5i-bJ8~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IPz-a6-TKw-view-10q-5i-bJ8~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IPz-a6-TKw-view-10q-5i-bJ8~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IPz-a6-TKw-view-10q-5i-bJ8~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IvD-s3-dnV-view-Uch-bF-LzO~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IvD-s3-dnV-view-Uch-bF-LzO~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IvD-s3-dnV-view-Uch-bF-LzO~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IvD-s3-dnV-view-Uch-bF-LzO~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IvD-s3-dnV-view-Uch-bF-LzO~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\IvD-s3-dnV-view-Uch-bF-LzO~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout1~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout1~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout1~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout1~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout1~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout1~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout2~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout2~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout2~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout2~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout2~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout2~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout3~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout3~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout3~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout3~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout3~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout3~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout4~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout4~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout4~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout4~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout4~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout4~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout5~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout5~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout5~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout5~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout5~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout5~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout6~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout6~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout6~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout6~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout6~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTIALayout6~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerFull~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerFull~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerFull~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerFull~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerFull~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerFull~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerPop~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerPop~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerPop~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerPop~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerPop~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\MKTInAppViewControllerPop~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\RFy-xF-LKd-view-3Cw-IA-fzl~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\RFy-xF-LKd-view-3Cw-IA-fzl~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\RFy-xF-LKd-view-3Cw-IA-fzl~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\RFy-xF-LKd-view-3Cw-IA-fzl~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\RFy-xF-LKd-view-3Cw-IA-fzl~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\RFy-xF-LKd-view-3Cw-IA-fzl~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\uLc-fR-LY1-view-fxn-nj-gyM~ipad.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\uLc-fR-LY1-view-fxn-nj-gyM~ipad.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\uLc-fR-LY1-view-fxn-nj-gyM~ipad.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\uLc-fR-LY1-view-fxn-nj-gyM~iphone.nib\objects.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\uLc-fR-LY1-view-fxn-nj-gyM~iphone.nib\objects-8.0+.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp.storyboardc\uLc-fR-LY1-view-fxn-nj-gyM~iphone.nib\runtime.nib" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp~ipad.storyboardc\Info.plist" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp~ipad.storyboardc\Info-8.0+.plist" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp~iphone.storyboardc\Info.plist" />
+    <BundleResource Include="Resources\MKTResources.bundle\MKTInApp~iphone.storyboardc\Info-8.0+.plist" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
