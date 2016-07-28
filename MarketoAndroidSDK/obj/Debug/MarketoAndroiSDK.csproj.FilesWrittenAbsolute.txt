@@ -1,0 +1,6 @@
+/Users/rohit/Projects/Marketo/MarketoAndroiSDK/obj/Debug/MonoAndroid,Version=v6.0.AssemblyAttribute.cs
+/Users/rohit/Projects/Marketo/MarketoAndroiSDK/obj/Debug/MarketoAndroiSDK.obj.Debug.__AndroidLibraryProjects__.zip
+/Users/rohit/Projects/Marketo/MarketoAndroiSDK/bin/Debug/MarketoAndroiSDK.dll.mdb
+/Users/rohit/Projects/Marketo/MarketoAndroiSDK/bin/Debug/MarketoAndroiSDK.dll
+/Users/rohit/Projects/Marketo/MarketoAndroiSDK/obj/Debug/MarketoAndroiSDK.dll
+/Users/rohit/Projects/Marketo/MarketoAndroiSDK/obj/Debug/MarketoAndroiSDK.dll.mdb

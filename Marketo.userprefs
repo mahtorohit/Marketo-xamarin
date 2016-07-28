@@ -1,22 +1,9 @@
-﻿<Properties StartupItem="TestMarketo/TestMarketo.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Marketo/ApiDefinition.cs">
-    <Files>
-      <File FileName="Marketo/ApiDefinition.cs" Line="114" Column="33" />
-      <File FileName="Marketo/Structs.cs" Line="4" Column="2" />
-      <File FileName="TestMarketo/AppDelegate.cs" Line="28" Column="4" />
-      <File FileName="TestMarketo/ViewController.cs" Line="28" Column="4" />
-      <File FileName="Marketo/libMarketo.linkwith.cs" Line="12" Column="1" />
-      <File FileName="Marketo/libInfColorPickerSDK.linkwith.cs" Line="1" Column="1" />
-      <File FileName="TestMarketo/Main.cs" Line="12" Column="1" />
-      <File FileName="Marketo/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties StartupItem="MarketoIosSample/MarketoIosSample.csproj">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/rohit/Projects/Marketo/Marketo/obj/Debug/ios/InfColorPicker/Marketo.g.cs" line="101" column="1" />
-    </BreakpointStore>
+    <Breakpoint file="/Users/rohit/Projects/Marketo/Marketo/obj/Debug/ios/InfColorPicker/Marketo.g.cs" line="101" column="1" />
+    <Breakpoint file="/Users/rohit/Projects/Marketo/TestMarketoAndroid/MainActivity.cs" line="17" column="1" />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TestMarketo PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DE31D5F9-2478-448F-8B25-71CF133DE81B" />
 </Properties>

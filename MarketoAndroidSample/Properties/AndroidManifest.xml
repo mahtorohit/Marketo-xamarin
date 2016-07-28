@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.testmarketoandroid">
+	<uses-sdk android:minSdkVersion="10" />
+
+	    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+    <permission
+        android:name="com.companyname.testmarketoandroid.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.companyname.testmarketoandroid.permission.C2D_MESSAGE" />
+
+	
+	<application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name">
+
+		<activity android:name="com.marketo.MarketoActivity" >
+            <intent-filter android:label="MarketoActivity" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="add_test_device"
+                    android:scheme="mkto" />
+            </intent-filter>
+        </activity>
+		
+		<receiver
+            android:name="com.marketo.MarketoBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				
+                <category android:name="com.vessel.landingdemo" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.vessel.landingdemo" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.marketo.MarketoIntentService" />
+	</application>
+</manifest>

@@ -1,4 +1,0 @@
-/Users/rohit/Projects/Marketo/TestMarketo/obj/iPhone/Debug/mtouch-cache/64/Link/Xamarin.iOS.dll
-/Users/rohit/Projects/Marketo/TestMarketo/obj/iPhone/Debug/mtouch-cache/64/Link/TestMarketo.exe
-/Users/rohit/Projects/Marketo/TestMarketo/obj/iPhone/Debug/mtouch-cache/64/Link/System.dll
-/Users/rohit/Projects/Marketo/TestMarketo/obj/iPhone/Debug/mtouch-cache/64/Link/mscorlib.dll
