@@ -48,6 +48,12 @@ namespace MarketoApi
 		[Export("setTimeoutInterval:")]
 		void SetTimeoutInterval(nint seconds);
 
+		[Export("unregisterPushDeviceToken")]
+		void UnregisterPushDeviceToken();
+
+		[Export("reportAll")]
+		void ReportAll ();
+
 		[Export("reportAction:withMetaData:")]
 		void ReportAction(string actionName, MarketoActionMetaData metaData);
 
